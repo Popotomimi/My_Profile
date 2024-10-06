@@ -18,6 +18,37 @@ body.light-mode {
   color: #000;
 }
 
+.welcome {
+  height: 250px;
+  padding-top: 150px;
+  background-color: #ccc;
+  margin-bottom: 50px;
+}
+
+.welcome h1 {
+  color: #000;
+  font-size: 2.5rem;
+}
+
+.btn {
+  background-color: #f6982d;
+  padding: 10px;
+  color: #222;
+  font-weight: bold;
+  border: solid 1px #000;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+  transform: 0.5s;
+}
+
+.btn:hover {
+  background-color: #000;
+  border: solid 1px #f6982d;
+  color: #f6982d;
+}
+
 /* Nav */
 
 .navbar {
@@ -49,7 +80,7 @@ li {
 }
 
 .card {
-  width: 30%;
+  width: 35%;
   margin: 1.5%;
   display: flex;
   flex-direction: column;
@@ -59,6 +90,11 @@ li {
   box-shadow: 1px 1px 5px 1px #00000096;
   padding: 15px;
   background-color: transparent;
+}
+
+.card img {
+  border: solid 1px #000;
+  border-radius: 5px;
 }
 
 .card h3 {
@@ -125,6 +161,22 @@ footer p {
 }
 
 /* Responsividade */
+@media (max-width: 700px) {
+  /* My Projects */
+  .projetcs-online {
+    display: block;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
+
+  .card {
+    width: 70%;
+    margin: 30px auto;
+  }
+}
+
 @media (max-width: 450px) {
   /* Footer */
 

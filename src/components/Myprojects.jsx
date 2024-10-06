@@ -1,4 +1,10 @@
-import React from "react";
+// React-router-dom
+import { Link } from "react-router-dom";
+
+// Img
+import Devnotes from "../assets/img/DevNotes.jpg";
+import Reactquiz from "../assets/img/ReactQuiz.jpg";
+import Generate from "../assets/img/Generate.jpg";
 
 const Myprojects = () => {
   return (
@@ -6,8 +12,8 @@ const Myprojects = () => {
       <h2>Projetos Online</h2>
       <p>Veja projetos que já reaizei o deploy:</p>
       <div className="projetcs-online">
-        <div className="card">
-          <img src="" alt="Imagem do projeto" />
+        <div className="card animate__animated animate__backInDown">
+          <img src={Generate} alt="Imagem do projeto" />
           <h3>Gerador de senhas</h3>
           <p>
             Utilização das key codes do JavaScript para gerar caracteres. Para
@@ -18,11 +24,21 @@ const Myprojects = () => {
             porque temos 26 letras no alfabeto. O 97 representa o ponto de
             início das letras minúsculas na tabela de key codes. <br />
             Todo o front-end foi estilizado com CSS puro, garantindo uma
-            interface limpa e responsiva
+            interface limpa e responsiva. <br />
+            Esse gerador de senhas utilizo frequentemente no meu dia a dia.{" "}
+            <br />
+            Foi o meu primeiro deploy e o projeto mais util até o momento.
           </p>
+          <Link
+            className="btn"
+            to="https://serene-trifle-07e9aa.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Acesse
+          </Link>
         </div>
-        <div className="card">
-          <img src="" alt="Imagem do projeto" />
+        <div className="card animate__animated animate__backInRight">
+          <img src={Reactquiz} alt="Imagem do projeto" />
           <h3>React Quiz</h3>
           <p>
             Um jogo de perguntas e respostas sobre programação. Nele, você pode
@@ -37,9 +53,16 @@ const Myprojects = () => {
             estrutura organizada e eficiente. Também implementei um Context para
             gerenciar a lógica e as regras de negócio do jogo.
           </p>
+          <Link
+            className="btn"
+            to="https://reactquizdev.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Acesse
+          </Link>
         </div>
-        <div className="card">
-          <img src="" alt="Imagem do projeto" />
+        <div className="card animate__animated animate__backInLeft">
+          <img src={Devnotes} alt="Imagem do projeto" />
           <h3>Dev Notes</h3>
           <p>
             Projeto FullStack: <br />
@@ -60,6 +83,13 @@ const Myprojects = () => {
             Mongoose: Para modelagem de dados e integração com o MongoDB. Cors:
             Para permitir requisições de diferentes origens.
           </p>
+          <Link
+            className="btn"
+            to="https://devnotesreact.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Acesse
+          </Link>
         </div>
       </div>
     </div>

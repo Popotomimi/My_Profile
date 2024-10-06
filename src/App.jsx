@@ -8,11 +8,16 @@ import Myprojects from "./components/Myprojects";
 import Skills from "./components/Skills";
 import Videos from "./components/Videos";
 
+// Animate
+import "animate.css";
+
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <h1>Seja bem vindo!</h1>
+      <div className="welcome">
+        <h1>Seja bem vindo!</h1>
+      </div>
       <Myprojects />
       <Skills />
       <Videos />
