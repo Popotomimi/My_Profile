@@ -1,18 +1,54 @@
 // React-router-dom
 import { Link } from "react-router-dom";
 
+// Hooks
+import { useEffect } from "react";
+
 // Img
 import Devnotes from "../assets/img/DevNotes.jpg";
 import Reactquiz from "../assets/img/ReactQuiz.jpg";
 import Generate from "../assets/img/Generate.jpg";
 
 const Myprojects = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (
+            entry.isIntersecting &&
+            !entry.target.classList.contains("animated")
+          ) {
+            entry.target.classList.add(
+              "animate__animated",
+              "animate__pulse",
+              "animated"
+            );
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+
+    return () => {
+      cards.forEach((card) => {
+        observer.unobserve(card);
+      });
+    };
+  }, []);
+
   return (
     <div className="my-projects">
       <h2>Projetos Online</h2>
       <p>Veja projetos que já reaizei o deploy:</p>
       <div className="projetcs-online">
-        <div className="card animate__animated animate__backInDown">
+        <div className="card">
           <img src={Generate} alt="Imagem do projeto" />
           <h3>Gerador de senhas</h3>
           <p>
@@ -37,7 +73,7 @@ const Myprojects = () => {
             Acesse
           </Link>
         </div>
-        <div className="card animate__animated animate__backInRight">
+        <div className="card">
           <img src={Reactquiz} alt="Imagem do projeto" />
           <h3>React Quiz</h3>
           <p>
@@ -61,7 +97,7 @@ const Myprojects = () => {
             Acesse
           </Link>
         </div>
-        <div className="card animate__animated animate__backInLeft">
+        <div className="card">
           <img src={Devnotes} alt="Imagem do projeto" />
           <h3>Dev Notes</h3>
           <p>

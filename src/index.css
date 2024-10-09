@@ -60,7 +60,7 @@ body.light-mode {
   padding-bottom: 10px;
 }
 
-li {
+.navbar li {
   cursor: pointer;
 }
 
@@ -70,6 +70,11 @@ li {
 }
 
 /* My Projects */
+
+.my-projects h2 {
+  margin: 15px;
+  font-size: 2rem;
+}
 
 .projetcs-online {
   display: flex;
@@ -105,6 +110,63 @@ li {
 .card p {
   font-size: 0.8rem;
   line-height: 1rem;
+}
+
+/* Skills */
+
+.skills {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.carousel .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+.legend {
+  font-size: 1.2em;
+  margin-top: 50px;
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.carousel-status {
+  display: none;
+}
+
+.react {
+  color: #61dafb;
+}
+
+.javascript {
+  color: #f7df1e;
+}
+
+.node {
+  color: #339933;
+}
+
+.bootstrap {
+  color: #7952b3;
+}
+
+.html {
+  color: #e34f26;
+}
+
+.css {
+  color: #1572b6;
+}
+
+.mysql {
+  color: #4479a1;
+}
+
+.mongodb {
+  color: #47a248;
 }
 
 /* Footer */
