@@ -16,7 +16,9 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <div className="welcome">
-        <h1>Seja bem vindo!</h1>
+        <h1 className="animate__animated animate__bounceInDown">
+          Seja bem vindo!
+        </h1>
       </div>
       <Myprojects />
       <Skills />

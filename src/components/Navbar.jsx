@@ -4,8 +4,8 @@ import {
   BsChatSquareText,
   BsFillMoonFill,
   BsFillBrightnessHighFill,
-  BsFillGridFill,
-  BsList,
+  BsFileImage,
+  BsFileImageFill,
   BsFillTrashFill,
 } from "react-icons/bs";
 
@@ -13,8 +13,8 @@ import {
 import { useState } from "react";
 
 // Img
-import Cubo from "../assets/img/cubos.png";
-import Cubos from "../assets/img/cuboss.jfif";
+import Cubo from "../assets/img/cubos.jfif";
+import Cubos from "../assets/img/cubo.jfif";
 
 const Navbar = () => {
   const deleteAll = () => {
@@ -36,11 +36,11 @@ const Navbar = () => {
 
   const handleLayout = () => {
     const welcomeDiv = document.querySelector(".welcome");
-    if (!background) {
-      setBackground(true);
+    if (!layout) {
+      setLayout(true);
       welcomeDiv.style.backgroundImage = `url('${Cubo}')`;
     } else {
-      setBackground(false);
+      setLayout(false);
       welcomeDiv.style.backgroundImage = `url('${Cubos}')`;
     }
   };
@@ -55,16 +55,13 @@ const Navbar = () => {
     }
   };
 
-  const [background, setBackground] = useState(false);
+  const [background, setBackground] = useState(true);
   const [layout, setLayout] = useState(false);
   const [font, setFont] = useState(false);
 
   return (
     <nav>
       <ul className="navbar">
-        <li>
-          <BsFillTrashFill title="NÃO CLIQUE" onClick={deleteAll} />
-        </li>
         <li className="languageToggle" onClick={handleFont}>
           {!font ? (
             <BsFillChatTextFill title="Alterar Fonte" />
@@ -73,7 +70,15 @@ const Navbar = () => {
           )}
         </li>
         <li className="layoutToggle" onClick={handleLayout}>
-          {!layout ? <BsFillGridFill /> : <BsList />}
+          {!layout ? (
+            <BsFileImage title="Alterar a imagem" />
+          ) : (
+            <BsFileImageFill title="Alterar a imagem" />
+          )}
+        </li>
+        <li>
+          <BsFillTrashFill title="NÃO CLIQUE" onClick={deleteAll} />
+          <span>NÃO CLIQUE</span>
         </li>
         <li className="styleBack" onClick={handleStyle}>
           {!background ? (
