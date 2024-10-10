@@ -6,12 +6,22 @@ import {
   BsFillBrightnessHighFill,
   BsFillGridFill,
   BsList,
+  BsFillTrashFill,
 } from "react-icons/bs";
 
 // Hooks
 import { useState } from "react";
 
+// Img
+import Cubo from "../assets/img/cubos.png";
+import Cubos from "../assets/img/cuboss.jfif";
+
 const Navbar = () => {
+  const deleteAll = () => {
+    window.alert("Você excluiu o site!!!!");
+    document.body.style.display = "none";
+  };
+
   const handleStyle = () => {
     if (!background) {
       setBackground(true);
@@ -25,14 +35,13 @@ const Navbar = () => {
   };
 
   const handleLayout = () => {
-    if (!layout) {
-      setLayout(true);
-      document.body.classList.add("grid-layout");
-      document.body.classList.remove("list-layout");
+    const welcomeDiv = document.querySelector(".welcome");
+    if (!background) {
+      setBackground(true);
+      welcomeDiv.style.backgroundImage = `url('${Cubo}')`;
     } else {
-      setLayout(false);
-      document.body.classList.add("list-layout");
-      document.body.classList.remove("grid-layout");
+      setBackground(false);
+      welcomeDiv.style.backgroundImage = `url('${Cubos}')`;
     }
   };
 
@@ -53,6 +62,9 @@ const Navbar = () => {
   return (
     <nav>
       <ul className="navbar">
+        <li>
+          <BsFillTrashFill title="NÃO CLIQUE" onClick={deleteAll} />
+        </li>
         <li className="languageToggle" onClick={handleFont}>
           {!font ? (
             <BsFillChatTextFill title="Alterar Fonte" />

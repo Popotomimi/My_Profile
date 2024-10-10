@@ -9,40 +9,43 @@ import { BiLogoMongodb } from "react-icons/bi";
 
 const SkillsCarousel = () => {
   return (
-    <Carousel className="skills" showThumbs={false} autoPlay infiniteLoop>
-      <div>
-        <FaReact className="react" size={150} />
-        <p className="legend">React</p>
-      </div>
-      <div>
-        <IoLogoJavascript className="javascript" size={150} />
-        <p className="legend">JavaScript</p>
-      </div>
-      <div>
-        <FaNode className="node" size={150} />
-        <p className="legend">Node.js</p>
-      </div>
-      <div>
-        <FaBootstrap className="bootstrap" size={150} />
-        <p className="legend">Bootstrap</p>
-      </div>
-      <div>
-        <TiHtml5 className="html" size={150} />
-        <p className="legend">HTML-5</p>
-      </div>
-      <div>
-        <SiCss3 className="css" size={150} />
-        <p className="legend">CSS-3</p>
-      </div>
-      <div>
-        <SiMysql className="mysql" size={150} />
-        <p className="legend">MySQL</p>
-      </div>
-      <div>
-        <BiLogoMongodb className="mongodb" size={150} />
-        <p className="legend">MongoDB</p>
-      </div>
-    </Carousel>
+    <div className="skills">
+      <h2>Utilizo as melhores tecnologias disponíveis no mercado:</h2>
+      <Carousel showThumbs={false} autoPlay infiniteLoop>
+        <div>
+          <FaReact className="react" size={150} />
+          <p className="legend">React</p>
+        </div>
+        <div>
+          <IoLogoJavascript className="javascript" size={150} />
+          <p className="legend">JavaScript</p>
+        </div>
+        <div>
+          <FaNode className="node" size={150} />
+          <p className="legend">Node.js</p>
+        </div>
+        <div>
+          <FaBootstrap className="bootstrap" size={150} />
+          <p className="legend">Bootstrap</p>
+        </div>
+        <div>
+          <TiHtml5 className="html" size={150} />
+          <p className="legend">HTML-5</p>
+        </div>
+        <div>
+          <SiCss3 className="css" size={150} />
+          <p className="legend">CSS-3</p>
+        </div>
+        <div>
+          <SiMysql className="mysql" size={150} />
+          <p className="legend">MySQL</p>
+        </div>
+        <div>
+          <BiLogoMongodb className="mongodb" size={150} />
+          <p className="legend">MongoDB</p>
+        </div>
+      </Carousel>
+    </div>
   );
 };
 
