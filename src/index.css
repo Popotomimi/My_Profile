@@ -140,7 +140,7 @@ body.light-mode {
 
 .skills {
   margin-top: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .carousel .slide {
@@ -191,6 +191,24 @@ body.light-mode {
 
 .mongodb {
   color: #47a248;
+}
+
+/* Videos */
+
+.videos {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.videos h2 {
+  width: 90%;
+  margin: 0 auto 50px;
+}
+
+.video iframe {
+  margin-bottom: 50px;
+  border: solid 1px #f6982d;
+  border-radius: 15px;
 }
 
 /* Footer */
@@ -248,6 +266,16 @@ footer p {
 
 /* Responsividade */
 @media (max-width: 700px) {
+  /* Videos */
+  .videos {
+    width: 100%;
+  }
+
+  .videos iframe {
+    width: 90%;
+    max-height: 1600px;
+  }
+
   /* My Projects */
   .projetcs-online {
     display: block;

@@ -46,7 +46,7 @@ const Myprojects = () => {
   return (
     <div className="my-projects">
       <h2>Projetos Online</h2>
-      <p>Veja projetos que já reaizei o deploy:</p>
+      <p>Veja projetos que já realizei o deploy:</p>
       <div className="projetcs-online">
         <div className="card">
           <img src={Generate} alt="Imagem do projeto" />
