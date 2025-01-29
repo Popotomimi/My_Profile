@@ -161,6 +161,22 @@ body.light-mode {
   display: none;
 }
 
+.next {
+  color: #000;
+}
+
+.type {
+  color: #3178c6;
+}
+
+.angular {
+  color: #dd0031;
+}
+
+.tailwind {
+  color: #38b2ac;
+}
+
 .react {
   color: #61dafb;
 }

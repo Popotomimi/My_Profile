@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import Devnotes from "../assets/img/DevNotes.jpg";
 import Reactquiz from "../assets/img/ReactQuiz.jpg";
 import Generate from "../assets/img/Generate.jpg";
+import Pokenext from "../assets/img/PokeNext.jpg";
 
 const Myprojects = () => {
   useEffect(() => {
@@ -100,6 +101,28 @@ const Myprojects = () => {
           <Link
             className="btn"
             to="https://devnotesreact.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Acesse
+          </Link>
+        </div>
+        <div className="card">
+          <img src={Pokenext} alt="Imagem do projeto" />
+          <h3>PokeNext</h3>
+          <p>
+            Desenvolvi uma aplicação web que utiliza a PokeAPI para exibir
+            informações detalhadas sobre Pokémons. Usei React.js para criar
+            componentes reutilizáveis, Next.js para renderização do lado do
+            servidor e melhorar a performance, TypeScript para garantir a
+            tipagem estática e segurança do código, e Tailwind CSS para um
+            layout totalmente responsivo. Com essas tecnologias, consegui
+            consumir a PokeAPI, adaptar o design a qualquer dispositivo e seguir
+            boas práticas de componentização, criando um projeto eficiente e
+            escalável. <br />
+          </p>
+          <Link
+            className="btn"
+            to="https://pokemonmalu.netlify.app/"
             target="_blank"
             rel="noopener noreferrer">
             Acesse

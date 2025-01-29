@@ -78,7 +78,7 @@ const Navbar = () => {
         </li>
         <li>
           <BsFillTrashFill title="NÃO CLIQUE" onClick={deleteAll} />
-          <span>NÃO CLIQUE</span>
+          <span onClick={deleteAll}>NÃO CLIQUE</span>
         </li>
         <li className="styleBack" onClick={handleStyle}>
           {!background ? (
