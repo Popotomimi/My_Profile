@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const Videos = () => {
   return (
     <div className="videos">
@@ -7,6 +5,15 @@ const Videos = () => {
         Veja meus projetos mais complexos com explicações técnicas detalhadas em
         postagens no LinkedIn:
       </h2>
+      <div className="video">
+        <iframe
+          src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7291192644104265728"
+          height="1088"
+          width="504"
+          frameborder="0"
+          allowfullscreen=""
+          title="Publicação incorporada"></iframe>
+      </div>
       <div className="video">
         <iframe
           src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7223736258215239680"
