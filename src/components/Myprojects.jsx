@@ -9,6 +9,7 @@ import Devnotes from "../assets/img/DevNotes.jpg";
 import Reactquiz from "../assets/img/ReactQuiz.jpg";
 import Generate from "../assets/img/Generate.jpg";
 import Pokenext from "../assets/img/PokeNext.jpg";
+import Clones from "../assets/img/Clones.jpg";
 
 const Myprojects = () => {
   useEffect(() => {
@@ -123,6 +124,26 @@ const Myprojects = () => {
           <Link
             className="btn"
             to="https://pokemonmalu.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Acesse
+          </Link>
+        </div>
+        <div className="card">
+          <img src={Clones} alt="Imagem do projeto" />
+          <h3>Clones</h3>
+          <p>
+            Desenvolvi clones da Amazon, Spotify e Facebook utilizando Next.js,
+            TypeScript e Tailwind CSS. Next.js foi essencial para a renderização
+            do lado do servidor e melhorar a performance das aplicações.
+            TypeScript garantiu a tipagem estática e a segurança do código,
+            enquanto Tailwind CSS proporcionou um layout moderno e responsivo.
+            Com essas tecnologias, consegui criar interfaces atraentes e
+            garantir a escalabilidade dos projetos. <br />
+          </p>
+          <Link
+            className="btn"
+            to="https://allclones.netlify.app/"
             target="_blank"
             rel="noopener noreferrer">
             Acesse
