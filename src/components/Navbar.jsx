@@ -13,8 +13,8 @@ import {
 import { useState } from "react";
 
 // Img
-import Cubo from "../assets/img/cubos.jfif";
-import Cubos from "../assets/img/cubo.jfif";
+import Cubo from "../assets/img/cubos.jpg";
+import Cubos from "../assets/img/cubo.jpg";
 
 const Navbar = () => {
   const deleteAll = () => {
@@ -35,13 +35,17 @@ const Navbar = () => {
   };
 
   const handleLayout = () => {
-    const welcomeDiv = document.querySelector(".welcome");
+    const welcomeDivs = document.querySelectorAll(".welcome");
     if (!layout) {
       setLayout(true);
-      welcomeDiv.style.backgroundImage = `url('${Cubo}')`;
+      welcomeDivs.forEach((div) => {
+        div.style.backgroundImage = `url('${Cubo}')`;
+      });
     } else {
       setLayout(false);
-      welcomeDiv.style.backgroundImage = `url('${Cubos}')`;
+      welcomeDivs.forEach((div) => {
+        div.style.backgroundImage = `url('${Cubos}')`;
+      });
     }
   };
 

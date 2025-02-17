@@ -21,14 +21,12 @@ body.light-mode {
 }
 
 .welcome {
-  height: 300px;
-  padding-top: 150px;
-  margin-bottom: 50px;
-  border-bottom: solid 1px #f6982d;
-  background-image: url("./assets/img/cubo.jfif");
-  background: contain;
+  background-image: url("./assets/img/cubo.jpg");
+  height: 30vh;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .welcome h1 {
@@ -43,6 +41,13 @@ body.light-mode {
   border: solid 1px #f6982d;
   box-shadow: 1px 1px 5px 1px #ffffff9c;
   border-radius: 25px;
+}
+
+.content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #222;
+  text-align: center;
 }
 
 .btn {
