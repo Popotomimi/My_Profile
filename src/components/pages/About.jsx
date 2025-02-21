@@ -1,4 +1,5 @@
-import React from "react";
+// Hooks
+import { useEffect, useRef } from "react";
 
 // IMG
 import Urso from "../../assets/img/urso.jpg";
@@ -7,9 +8,31 @@ import Girafa from "../../assets/img/girafa.jpg";
 import Capivara from "../../assets/img/capivara.jpg";
 
 const About = () => {
+  useEffect(() => {
+    const messageElement = document.getElementById("message");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            messageElement.classList.add("animate");
+            observer.unobserve(messageElement);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(messageElement);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div>
       <h1 className="first animate__animated animate__jackInTheBox">Sobre</h1>
+      <h2>Interaja com as imagens</h2>
       <div className="container-animals">
         <div className="animals">
           <img src={Urso} alt="Imagem de um urso" />
@@ -51,8 +74,25 @@ const About = () => {
             apaixonado pelo que faz e comprometido em entregar soluções de alta
             qualidade, estou à disposição para colaborar em seus projetos.
           </p>
-          <p>Vamos construir algo incrível juntos!</p>
+          <p id="message" className="message">
+            Vamos construir algo incrível juntos!
+          </p>
         </div>
+      </div>
+      <h2 className="seccond">Tipos de Loading</h2>
+      <div className="container-loading">
+        <div className="spinner"></div>
+        <div className="floating-squares">
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+        </div>
+        <div className="dots">
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+        </div>
+        <div className="loading-text">Carregando...</div>
       </div>
     </div>
   );
