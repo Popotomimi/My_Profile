@@ -1,16 +1,20 @@
 // Icons
 import {
-  BsFillChatTextFill,
-  BsChatSquareText,
   BsFillMoonFill,
   BsFillBrightnessHighFill,
   BsFileImage,
   BsFileImageFill,
   BsFillTrashFill,
+  BsHouse,
+  BsInfoSquare,
 } from "react-icons/bs";
+import { TiThMenu } from "react-icons/ti";
 
 // Hooks
 import { useState } from "react";
+
+// React Route Dom
+import { Link } from "react-router-dom";
 
 // Img
 import Cubo from "../assets/img/cubos.jpg";
@@ -49,28 +53,30 @@ const Navbar = () => {
     }
   };
 
-  const handleFont = () => {
-    if (!font) {
-      setFont(true);
-      document.body.style.fontFamily = "Verdana";
-    } else {
-      setFont(false);
-      document.body.style.fontFamily = "Helvetica";
-    }
-  };
-
   const [background, setBackground] = useState(true);
   const [layout, setLayout] = useState(false);
-  const [font, setFont] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav>
       <ul className="navbar">
-        <li className="languageToggle" onClick={handleFont}>
-          {!font ? (
-            <BsFillChatTextFill title="Alterar Fonte" />
-          ) : (
-            <BsChatSquareText title="Alterar Fonte" />
+        <li className="menuToggle" onClick={() => setMenuOpen(!menuOpen)}>
+          <TiThMenu title="Menu" />
+          {menuOpen && (
+            <ul className="submenu">
+              <li>
+                <Link to="/">
+                  <BsHouse />
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about">
+                  <BsInfoSquare />
+                  About
+                </Link>
+              </li>
+            </ul>
           )}
         </li>
         <li className="layoutToggle" onClick={handleLayout}>

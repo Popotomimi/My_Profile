@@ -29,6 +29,11 @@ body.light-mode {
   background-size: cover;
 }
 
+.first {
+  font-size: 2.5rem;
+  margin-top: 50px;
+}
+
 .welcome h1 {
   font-size: 2rem;
   background-color: #000000c4;
@@ -48,6 +53,10 @@ body.light-mode {
   padding-bottom: 50px;
   background-color: #222;
   text-align: center;
+}
+
+.content h1 {
+  color: #fff !important;
 }
 
 .btn {
@@ -96,6 +105,34 @@ body.light-mode {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+}
+
+.submenu {
+  list-style: none;
+  padding: 5px;
+}
+
+.submenu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f6982d;
+  border-bottom: solid 1px transparent;
+  padding: 3px;
+  transition: 0.5s;
+}
+
+.submenu svg {
+  margin-right: 5px;
+  color: #f6982d;
+}
+
+.submenu a:hover {
+  border-bottom: solid 1px #f6982d;
+}
+
+.submenu li {
+  padding: 5px;
 }
 
 /* My Projects */
@@ -214,22 +251,73 @@ body.light-mode {
   color: #47a248;
 }
 
-/* Videos */
-
-.videos {
-  max-width: 1000px;
-  margin: 0 auto;
+/* About */
+.container-animals {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.videos h2 {
-  width: 90%;
-  margin: 0 auto 50px;
+.container-animals:hover .animals {
+  opacity: 0.5;
 }
 
-.video iframe {
-  margin-bottom: 50px;
+.container-animals .animals:hover {
+  opacity: 1;
+}
+
+.container-animals img {
+  max-width: 250px;
   border: solid 1px #f6982d;
   border-radius: 15px;
+  margin: 5px;
+}
+
+.animals {
+  transition: all 0.5s;
+}
+
+.animals:hover {
+  transform: translateY(-20px);
+}
+
+.about {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background-image {
+  margin-top: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/img/backgroundImage.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.about-text {
+  color: #c3c3c3;
+  background: rgba(0, 0, 0, 0.884);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+}
+
+.about-text p {
+  line-height: 1.2rem;
+  margin-bottom: 15px;
 }
 
 /* Footer */
