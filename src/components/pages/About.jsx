@@ -6,7 +6,10 @@ import Urso from "../../assets/img/urso.jpg";
 import Panda from "../../assets/img/panda.jpg";
 import Girafa from "../../assets/img/girafa.jpg";
 import Capivara from "../../assets/img/capivara.jpg";
+
+// Components
 import Cursor from "../Cursor";
+import MemoryGame from "../Memorygame";
 
 const About = () => {
   useEffect(() => {
@@ -110,6 +113,7 @@ const About = () => {
         <h1>Mova o mouse</h1>
         <Cursor />
       </div>
+      <MemoryGame />
     </div>
   );
 };
