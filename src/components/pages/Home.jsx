@@ -1,4 +1,5 @@
 // Components
+import MemoryGame from "../Memorygame";
 import Myprojects from "../Myprojects";
 import Skills from "../Skills";
 
@@ -14,6 +15,7 @@ const Home = () => {
       <div className="welcome"></div>
       <Myprojects />
       <Skills />
+      <MemoryGame />
     </div>
   );
 };

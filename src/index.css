@@ -29,7 +29,7 @@ body.light-mode {
 }
 
 .welcome {
-  background-image: url("./assets/img/cubo.jpg");
+  background-image: url("./assets/img/cubos.jpg");
   height: 30vh;
   background-attachment: fixed;
   background-position: center;
@@ -189,68 +189,69 @@ body.light-mode {
 
 /* Skills */
 
-/* Ajustes de estilo existentes */
 .skills {
   margin-top: 50px;
   text-align: center;
   padding: 2em;
-  background: linear-gradient(135deg, #f6d365 0%, #f6982d 100%);
+  background: linear-gradient(135deg, #f1ca4a 0%, #f6982d 100%);
   color: #222;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .skills h2 {
   font-size: 2.5em;
   margin-bottom: 1em;
   color: #222;
 }
-
 .slick-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .slider-for .slick-slide {
   padding: 20px;
   transition: transform 0.3s ease;
 }
-
 .slider-for .slick-slide:hover {
   transform: scale(1.1);
 }
-
 .slider-nav .slick-slide {
   padding: 10px;
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
-
 .slider-nav .slick-slide.slick-current {
   opacity: 1;
 }
-
 .legend {
   font-size: 1.2em;
   margin-top: 10px;
   color: #fff;
 }
-
 .slick-dots li button:before {
   font-size: 12px;
   color: #fff;
 }
-
 .slick-dots li.slick-active button:before {
   color: #fda085;
 }
-
 .slider-nav .slick-slide[inert="true"] {
   pointer-events: none;
   user-select: none;
   opacity: 0.3;
 }
-
+.slick-track {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.slider-for .slick-slide,
+.slider-nav .slick-slide {
+  flex: 0 0 auto;
+}
+.slider-for .slick-slide li svg,
+.slider-nav .slick-slide li svg {
+  width: 100%;
+  height: auto;
+}
 .next {
   color: #000;
 }
@@ -297,6 +298,50 @@ body.light-mode {
 
 .mongodb {
   color: #47a248;
+}
+
+/* Memory Game */
+
+.memory-game {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-game {
+  width: 100px;
+  height: 150px;
+  color: #222;
+  font-weight: bold;
+  background: linear-gradient(135deg, #f6982d 0%, #f8cd40 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card.flipped {
+  background-color: #fff;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(135deg, #f6982d 0%, #f8cd40 100%);
+  border-radius: 5px;
+  transform: 0.5s;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #f8cd40 0%, #f6982d 100%);
 }
 
 /* About */
@@ -366,7 +411,7 @@ body.light-mode {
 }
 
 .space-two {
-  margin-top: 400px;
+  margin-top: 70px;
   margin-bottom: 70px;
 }
 
@@ -537,6 +582,23 @@ footer p {
     padding: 15px;
   }
 
+  .slider-for .slick-slide {
+    padding: 15px;
+  }
+
+  .slider-nav .slick-slide {
+    padding: 5px;
+  }
+
+  .slick-dots {
+    display: none !important;
+  }
+
+  .slider-for .slick-slide li svg,
+  .slider-nav .slick-slide li svg {
+    width: 80% !important;
+  }
+
   .legend {
     font-size: 1em;
   }
@@ -563,6 +625,7 @@ footer p {
   }
 
   /* My Projects */
+
   .projetcs-online {
     display: block;
     justify-content: center;
@@ -574,6 +637,18 @@ footer p {
   .card {
     width: 70%;
     margin: 30px auto;
+  }
+
+  /* Memory Game */
+
+  .memory-game {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .card-game {
+    width: 45%;
+    margin: 5px 0;
   }
 }
 
