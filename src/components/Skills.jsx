@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
 import { FaReact, FaNode, FaBootstrap, FaAngular } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -18,17 +18,17 @@ const SkillsCarousel = () => {
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: sliderNavRef.current,
+    afterChange: (index) => sliderNavRef.current.slickGoTo(index),
   };
 
   const settingsNav = {
     slidesToShow: 3,
     slidesToScroll: 1,
-    asNavFor: sliderMainRef.current,
     dots: true,
     centerMode: true,
     focusOnSelect: true,
     centerPadding: "0px",
+    afterChange: (index) => sliderMainRef.current.slickGoTo(index),
   };
 
   const skills = [

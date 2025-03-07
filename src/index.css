@@ -193,65 +193,27 @@ body.light-mode {
   margin-top: 50px;
   text-align: center;
   padding: 2em;
-  background: linear-gradient(135deg, #f1ca4a 0%, #f6982d 100%);
+  background-color: #333;
   color: #222;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.slick-dots {
+  display: none !important;
+}
+
+.legend {
+  color: #fff;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
 .skills h2 {
   font-size: 2.5em;
   margin-bottom: 1em;
-  color: #222;
-}
-.slick-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.slider-for .slick-slide {
-  padding: 20px;
-  transition: transform 0.3s ease;
-}
-.slider-for .slick-slide:hover {
-  transform: scale(1.1);
-}
-.slider-nav .slick-slide {
-  padding: 10px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-.slider-nav .slick-slide.slick-current {
-  opacity: 1;
-}
-.legend {
-  font-size: 1.2em;
-  margin-top: 10px;
   color: #fff;
 }
-.slick-dots li button:before {
-  font-size: 12px;
-  color: #fff;
-}
-.slick-dots li.slick-active button:before {
-  color: #fda085;
-}
-.slider-nav .slick-slide[inert="true"] {
-  pointer-events: none;
-  user-select: none;
-  opacity: 0.3;
-}
-.slick-track {
-  display: flex;
-  flex-wrap: nowrap;
-}
-.slider-for .slick-slide,
-.slider-nav .slick-slide {
-  flex: 0 0 auto;
-}
-.slider-for .slick-slide li svg,
-.slider-nav .slick-slide li svg {
-  width: 100%;
-  height: auto;
-}
+
 .next {
   color: #000;
 }
@@ -575,28 +537,7 @@ footer p {
   }
 
   .skills h2 {
-    font-size: 2em;
-  }
-
-  .slider-for .slick-slide {
-    padding: 15px;
-  }
-
-  .slider-for .slick-slide {
-    padding: 15px;
-  }
-
-  .slider-nav .slick-slide {
-    padding: 5px;
-  }
-
-  .slick-dots {
-    display: none !important;
-  }
-
-  .slider-for .slick-slide li svg,
-  .slider-nav .slick-slide li svg {
-    width: 80% !important;
+    font-size: 1.5rem;
   }
 
   .legend {
@@ -610,18 +551,8 @@ footer p {
   }
 
   .container-animation {
-    top: 15%;
-    height: 50%;
-  }
-
-  /* Videos */
-  .videos {
-    width: 100%;
-  }
-
-  .videos iframe {
-    width: 90%;
-    max-height: 1600px;
+    top: 20%;
+    height: 55%;
   }
 
   /* My Projects */
