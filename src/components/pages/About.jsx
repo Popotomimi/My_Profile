@@ -1,11 +1,12 @@
 // Hooks
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 // IMG
 import Urso from "../../assets/img/urso.jpg";
 import Panda from "../../assets/img/panda.jpg";
 import Girafa from "../../assets/img/girafa.jpg";
 import Capivara from "../../assets/img/capivara.jpg";
+import Cursor from "../Cursor";
 
 const About = () => {
   useEffect(() => {
@@ -32,7 +33,32 @@ const About = () => {
   return (
     <div>
       <h1 className="first animate__animated animate__jackInTheBox">Sobre</h1>
-      <h2>Interaja com as imagens</h2>
+      <div className="body">
+        <div className="container-animation">
+          <div className="circle" style={{ "--i": 0 }}></div>
+          <div className="circle" style={{ "--i": 1 }}></div>
+          <div className="circle" style={{ "--i": 2 }}></div>
+          <div className="circle" style={{ "--i": 3 }}></div>
+          <div className="circle" style={{ "--i": 4 }}></div>
+          <div className="circle" style={{ "--i": 5 }}></div>
+          <div className="circle" style={{ "--i": 6 }}></div>
+          <div className="circle" style={{ "--i": 7 }}></div>
+          <div className="circle" style={{ "--i": 8 }}></div>
+          <div className="circle" style={{ "--i": 9 }}></div>
+          <div className="circle" style={{ "--i": 10 }}></div>
+          <div className="circle" style={{ "--i": 11 }}></div>
+          <div className="circle" style={{ "--i": 12 }}></div>
+          <div className="circle" style={{ "--i": 13 }}></div>
+          <div className="circle" style={{ "--i": 14 }}></div>
+          <div className="circle" style={{ "--i": 15 }}></div>
+          <div className="circle" style={{ "--i": 16 }}></div>
+          <div className="circle" style={{ "--i": 17 }}></div>
+          <div className="circle" style={{ "--i": 18 }}></div>
+          <div className="circle" style={{ "--i": 19 }}></div>
+          <div className="circle" style={{ "--i": 20 }}></div>
+        </div>
+      </div>
+      <h2 className="space">Interaja com as imagens</h2>
       <div className="container-animals">
         <div className="animals">
           <img src={Urso} alt="Imagem de um urso" />
@@ -79,20 +105,10 @@ const About = () => {
           </p>
         </div>
       </div>
-      <h2 className="seccond">Tipos de Loading</h2>
-      <div className="container-loading">
-        <div className="spinner"></div>
-        <div className="floating-squares">
-          <div className="square"></div>
-          <div className="square"></div>
-          <div className="square"></div>
-        </div>
-        <div className="dots">
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-        </div>
-        <div className="loading-text">Carregando...</div>
+      <div className="hidden">
+        <Cursor className="space-two" />
+        <h1>Mova o mouse</h1>
+        <Cursor />
       </div>
     </div>
   );

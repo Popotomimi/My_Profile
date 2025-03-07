@@ -12,7 +12,7 @@ import Pokenext from "../assets/img/PokeNext.jpg";
 import Clones from "../assets/img/Clones.jpg";
 
 const Myprojects = () => {
-  /*useEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -43,7 +43,7 @@ const Myprojects = () => {
         observer.unobserve(card);
       });
     };
-  }, []); */
+  }, []);
 
   return (
     <div className="my-projects">

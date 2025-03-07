@@ -1,5 +1,3 @@
-import React from "react";
-
 // Components
 import Myprojects from "../Myprojects";
 import Skills from "../Skills";
