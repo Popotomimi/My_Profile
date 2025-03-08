@@ -1,9 +1,15 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Slider from "react-slick";
-import { FaReact, FaNode, FaBootstrap, FaAngular } from "react-icons/fa";
+import {
+  FaReact,
+  FaNode,
+  FaBootstrap,
+  FaAngular,
+  FaCss3Alt,
+} from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { TiHtml5 } from "react-icons/ti";
-import { SiCss3, SiMysql, SiTailwindcss } from "react-icons/si";
+import { SiMysql, SiTailwindcss } from "react-icons/si";
 import { BiLogoMongodb, BiLogoTypescript } from "react-icons/bi";
 import { RiNextjsLine } from "react-icons/ri";
 import "../../node_modules/slick-carousel/slick/slick.css";
@@ -12,13 +18,38 @@ import "../../node_modules/slick-carousel/slick/slick-theme.css";
 const SkillsCarousel = () => {
   const sliderMainRef = useRef(null);
   const sliderNavRef = useRef(null);
+  const carouselContainerRef = useRef(null);
+
+  useEffect(() => {
+    if (carouselContainerRef.current) {
+      carouselContainerRef.current.setAttribute("tabindex", "-1");
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleBlur = () => {
+      if (carouselContainerRef.current) {
+        carouselContainerRef.current.blur();
+      }
+    };
+
+    const container = carouselContainerRef.current;
+    if (container) {
+      container.addEventListener("click", handleBlur);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener("click", handleBlur);
+      }
+    };
+  }, []);
 
   const settingsMain = {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    afterChange: (index) => sliderNavRef.current.slickGoTo(index),
   };
 
   const settingsNav = {
@@ -28,44 +59,55 @@ const SkillsCarousel = () => {
     centerMode: true,
     focusOnSelect: true,
     centerPadding: "0px",
-    afterChange: (index) => sliderMainRef.current.slickGoTo(index),
   };
 
   const skills = [
-    { icon: <FaReact size={100} className="react" />, name: "React.js" },
     {
-      icon: <BiLogoTypescript size={100} className="type" />,
+      icon: <FaReact size={100} className="react main-svg" />,
+      name: "React.js",
+    },
+    {
+      icon: <BiLogoTypescript size={100} className="type main-svg" />,
       name: "Typescript",
     },
-    { icon: <RiNextjsLine size={100} className="next" />, name: "Next.js" },
-    { icon: <FaAngular size={100} className="angular" />, name: "Angular" },
     {
-      icon: <IoLogoJavascript size={100} className="javascript" />,
+      icon: <RiNextjsLine size={100} className="next main-svg" />,
+      name: "Next.js",
+    },
+    {
+      icon: <FaAngular size={100} className="angular main-svg" />,
+      name: "Angular",
+    },
+    {
+      icon: <IoLogoJavascript size={100} className="javascript main-svg" />,
       name: "JavaScript",
     },
-    { icon: <FaNode size={100} className="node" />, name: "Node.js" },
-    { icon: <TiHtml5 size={100} className="html" />, name: "HTML-5" },
-    { icon: <SiCss3 size={100} className="css" />, name: "CSS-3" },
+    { icon: <FaNode size={100} className="node main-svg" />, name: "Node.js" },
+    { icon: <TiHtml5 size={100} className="html main-svg" />, name: "HTML-5" },
+    { icon: <FaCss3Alt size={100} className="css main-svg" />, name: "CSS-3" },
     {
-      icon: <SiTailwindcss size={100} className="tailwind" />,
+      icon: <SiTailwindcss size={100} className="tailwind main-svg" />,
       name: "Tailwind",
     },
     {
-      icon: <FaBootstrap size={100} className="bootstrap" />,
+      icon: <FaBootstrap size={100} className="bootstrap main-svg" />,
       name: "Bootstrap",
     },
-    { icon: <SiMysql size={100} className="mysql" />, name: "MySQL" },
-    { icon: <BiLogoMongodb size={100} className="mongodb" />, name: "MongoDB" },
+    { icon: <SiMysql size={100} className="mysql main-svg" />, name: "MySQL" },
+    {
+      icon: <BiLogoMongodb size={100} className="mongodb main-svg" />,
+      name: "MongoDB",
+    },
   ];
 
   return (
-    <div className="skills">
+    <div className="skills" ref={carouselContainerRef}>
       <h2>Utilizo as melhores tecnologias disponíveis no mercado:</h2>
       <Slider {...settingsMain} ref={sliderMainRef} className="slider-for">
         {skills.map((skill, index) => (
           <div key={index}>
             {skill.icon}
-            <p className="legend">{skill.name}</p>
+            <p className="legend main-legend">{skill.name}</p>
           </div>
         ))}
       </Slider>
@@ -73,7 +115,7 @@ const SkillsCarousel = () => {
         {skills.map((skill, index) => (
           <div key={index}>
             {skill.icon}
-            <p className="legend">{skill.name}</p>
+            <p className="legend main-legend">{skill.name}</p>
           </div>
         ))}
       </Slider>

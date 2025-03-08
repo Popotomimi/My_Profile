@@ -189,6 +189,11 @@ body.light-mode {
 
 /* Skills */
 
+.skills .slider-for .slick-slide.slick-current .main-svg,
+.skills .slider-for .slick-slide.slick-current .main-legend {
+  display: none;
+}
+
 .skills {
   margin-top: 50px;
   text-align: center;
