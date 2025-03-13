@@ -323,12 +323,12 @@ button:hover {
 
 .comments-container {
   margin-top: 100px !important;
-  background-color: #222;
+  background-color: #333;
   color: #fff;
   text-align: left;
   margin: 0 auto 20px;
   padding: 20px;
-  border: 1px solid #f6982d;
+  border: 1px solid #f6982d7a;
   border-radius: 8px;
   box-shadow: 1px 1px 5px 1px #00000096;
   max-width: 900px;
@@ -355,7 +355,7 @@ button:hover {
 .comments-container textarea {
   width: 90%;
   padding: 6px;
-  background-color: #222;
+  background-color: #333;
   margin-bottom: 10px;
   border: 1px solid #f6982d;
   border-radius: 4px;
@@ -685,6 +685,10 @@ footer p {
   .card-game {
     width: 45%;
     margin: 5px 0;
+  }
+
+  .comments-container {
+    width: 80%;
   }
 }
 
