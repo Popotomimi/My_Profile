@@ -2,6 +2,7 @@
 import Myprojects from "../Myprojects";
 import Skills from "../Skills";
 import MemoryGame from "../Memorygame";
+import Comments from "../Comments";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Myprojects />
       <Skills />
       <MemoryGame />
+      <Comments />
     </div>
   );
 };

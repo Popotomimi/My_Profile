@@ -9,8 +9,12 @@ import {
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { TiHtml5 } from "react-icons/ti";
-import { SiMysql, SiTailwindcss } from "react-icons/si";
-import { BiLogoMongodb, BiLogoTypescript } from "react-icons/bi";
+import { SiMysql, SiTailwindcss, SiNestjs } from "react-icons/si";
+import {
+  BiLogoMongodb,
+  BiLogoTypescript,
+  BiLogoPostgresql,
+} from "react-icons/bi";
 import { RiNextjsLine } from "react-icons/ri";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
@@ -97,6 +101,14 @@ const SkillsCarousel = () => {
     {
       icon: <BiLogoMongodb size={100} className="mongodb main-svg" />,
       name: "MongoDB",
+    },
+    {
+      icon: <BiLogoPostgresql size={100} className="postgre main-svg" />,
+      name: "PostgreSQL",
+    },
+    {
+      icon: <SiNestjs size={100} className="nest main-svg" />,
+      name: "Nest.js",
     },
   ];
 

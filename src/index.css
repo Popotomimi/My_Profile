@@ -214,7 +214,7 @@ body.light-mode {
 }
 
 .skills h2 {
-  font-size: 2.5em;
+  font-size: 1.7em;
   margin-bottom: 1em;
   color: #fff;
 }
@@ -267,6 +267,14 @@ body.light-mode {
   color: #47a248;
 }
 
+.postgre {
+  color: #336791;
+}
+
+.nest {
+  color: #e0234e;
+}
+
 /* Memory Game */
 
 .memory-game {
@@ -311,6 +319,104 @@ button:hover {
   background: linear-gradient(135deg, #f8cd40 0%, #f6982d 100%);
 }
 
+/* Comments */
+
+.comments-container {
+  margin-top: 100px !important;
+  background-color: #222;
+  color: #fff;
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #f6982d;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px 1px #00000096;
+}
+
+.comments-container h2 {
+  border-left: solid 3px #f6982d;
+  padding-left: 7px;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.comments-container form {
+  margin-bottom: 20px;
+}
+
+.comments-container input[type="text"],
+.comments-container textarea {
+  width: 90%;
+  padding: 6px;
+  background-color: #222;
+  margin-bottom: 10px;
+  border: 1px solid #f6982d;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.comments-container textarea {
+  height: 5rem;
+}
+
+.comments-container input[type="text"]::placeholder,
+.comments-container textarea::placeholder {
+  color: #ffffffc4;
+  font-size: 0.7rem;
+}
+
+.comment {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #f6982d;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+.comments h3 {
+  color: #f6982d;
+  margin-bottom: 5px;
+}
+
+.comments p {
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h3::first-letter,
+p::first-letter {
+  text-transform: uppercase;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-top: 4px solid #f6982d;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* About */
 
 .container-animals {
@@ -334,15 +440,15 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 50vh;
   background-color: #222;
   overflow: hidden;
 }
 
 .container-animation {
   position: absolute;
-  top: 25%;
-  height: 90%;
+  top: 40%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -429,19 +535,6 @@ button:hover {
   text-align: center;
 }
 
-.background-image {
-  margin-top: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/img/backgroundImage.jpg");
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
-
 .about-text {
   color: #c3c3c3;
   background: rgba(0, 0, 0, 0.884);
@@ -519,7 +612,7 @@ footer {
   align-items: center;
   text-align: center;
   margin-top: 150px;
-  margin-bottom: 0;
+  margin-bottom: 50px;
   padding: 5%;
   border-top: #f6982d solid 1px;
 }
@@ -556,8 +649,8 @@ footer p {
   }
 
   .container-animation {
-    top: 20%;
-    height: 55%;
+    top: 10%;
+    height: 60%;
   }
 
   /* My Projects */
