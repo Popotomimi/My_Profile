@@ -326,11 +326,12 @@ button:hover {
   background-color: #222;
   color: #fff;
   text-align: left;
-  margin: 20px;
+  margin: 0 auto 20px;
   padding: 20px;
   border: 1px solid #f6982d;
   border-radius: 8px;
   box-shadow: 1px 1px 5px 1px #00000096;
+  max-width: 900px;
 }
 
 .comments-container h2 {
@@ -341,7 +342,13 @@ button:hover {
 }
 
 .comments-container form {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
+}
+
+.comments-container input[type="submit"] {
+  max-width: 100px;
 }
 
 .comments-container input[type="text"],

@@ -27,6 +27,12 @@ const Comments = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!name || !comment) {
+      alert("Preencha todos os campos");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
