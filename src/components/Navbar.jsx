@@ -6,6 +6,7 @@ import {
   BsInfoSquare,
 } from "react-icons/bs";
 import { TiThMenu } from "react-icons/ti";
+import { GiPadlock } from "react-icons/gi";
 
 // Hooks
 import { useState } from "react";
@@ -46,6 +47,12 @@ const Navbar = () => {
                 <Link to="/about">
                   <BsInfoSquare />
                   About
+                </Link>
+              </li>
+              <li>
+                <Link to="/auth">
+                  <GiPadlock />
+                  Auth
                 </Link>
               </li>
             </ul>

@@ -319,6 +319,100 @@ button:hover {
   background: linear-gradient(135deg, #f8cd40 0%, #f6982d 100%);
 }
 
+/* AuthPage */
+
+.auth-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.auth-container h1 {
+  text-align: center;
+  color: #f6982d;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.backend-section,
+.frontend-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #c3c3c3;
+}
+
+.backend-section h2,
+.frontend-section h2 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.backend-section p,
+.frontend-section p {
+  color: #333;
+  line-height: 1.6;
+}
+
+ul.dependencies {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+ul.dependencies li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-auth {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  background-color: #c3c3c3;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-auth a {
+  color: #0044ff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.footer-auth a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.footer-auth svg {
+  margin-right: 5px;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.repository {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Comments */
 
 .comments-container {
@@ -652,11 +746,11 @@ footer p {
   /* About */
 
   .body {
-    height: 20vh;
+    height: 50vh;
   }
 
   .container-animation {
-    top: 10%;
+    top: 31%;
     height: 60%;
   }
 
@@ -689,6 +783,21 @@ footer p {
 
   .comments-container {
     width: 80%;
+  }
+
+  /* AuthPage */
+
+  .auth-container {
+    padding: 15px;
+  }
+
+  .backend-section,
+  .frontend-section {
+    padding: 15px;
+  }
+
+  .auth-container h1 {
+    font-size: 1.5rem;
   }
 }
 

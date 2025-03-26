@@ -11,6 +11,7 @@ import "animate.css";
 // Pages
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
+import AuthPage from "./components/pages/AuthPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/auth" element={<AuthPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
