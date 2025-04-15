@@ -10,6 +10,7 @@ import Reactquiz from "../assets/img/ReactQuiz.jpg";
 import Generate from "../assets/img/Generate.jpg";
 import Pokenext from "../assets/img/PokeNext.jpg";
 import Clones from "../assets/img/Clones.jpg";
+import Album from "../assets/img/Album.jpg";
 
 const Myprojects = () => {
   useEffect(() => {
@@ -50,6 +51,25 @@ const Myprojects = () => {
       <h2>Projetos Online</h2>
       <p>Veja projetos que já realizei o deploy:</p>
       <div className="projetcs-online">
+        <div className="card">
+          <img src={Album} alt="Imagem do projeto" />
+          <h3>Album de Fotos</h3>
+          <p>
+            Projeto onde você pode acessar um banco de imagens e realizar o
+            download das fotos desejadas com facilidade. É possível encontrar
+            imagens de alta qualidade, organizadas em categorias variadas e
+            prontas para uso. O projeto utiliza Vite com React.js e TypeScript,
+            além de integrar a API chamada Unsplash para garantir uma
+            experiência rica e prática aos usuários. <br /> <br />
+          </p>
+          <Link
+            className="btn"
+            to="https://albumreactphotos.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Acesse
+          </Link>
+        </div>
         <div className="card">
           <img src={Generate} alt="Imagem do projeto" />
           <h3>Gerador de senhas</h3>
