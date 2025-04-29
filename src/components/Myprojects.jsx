@@ -11,6 +11,7 @@ import Generate from "../assets/img/Generate.jpg";
 import Pokenext from "../assets/img/PokeNext.jpg";
 import Clones from "../assets/img/Clones.jpg";
 import Album from "../assets/img/Album.jpg";
+import Finder from "../assets/img/GitHubFinder.jpg";
 
 const Myprojects = () => {
   useEffect(() => {
@@ -51,6 +52,26 @@ const Myprojects = () => {
       <h2>Projetos Online</h2>
       <p>Veja projetos que já realizei o deploy:</p>
       <div className="projetcs-online">
+        <div className="card">
+          <img src={Finder} alt="Imagem do projeto" />
+          <h3>GitHub Finder</h3>
+          <p>
+            Este projeto foi desenvolvido em React com TypeScript e faz
+            integração com a API do GitHub. Ele permite pesquisar usuários da
+            plataforma e fornece informações detalhadas, como os repositórios
+            mais relevantes, quantidade de seguidores e estrelas acumuladas. Com
+            uma interface simples e responsiva, o objetivo é oferecer uma forma
+            prática e eficiente de acessar os dados dos perfis do GitHub.
+            <br /> <br />
+          </p>
+          <Link
+            className="btn"
+            to="https://searchreactgit.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Acesse
+          </Link>
+        </div>
         <div className="card">
           <img src={Album} alt="Imagem do projeto" />
           <h3>Album de Fotos</h3>
