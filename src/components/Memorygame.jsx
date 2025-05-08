@@ -64,7 +64,7 @@ const MemoryGame = () => {
   };
 
   return (
-    <div>
+    <div className="memory">
       <h2 className="space-two">Memory Game para baixar meu currículo</h2>
       <div className="memory-game">
         {shuffledCards.map((card, index) => (
@@ -81,7 +81,9 @@ const MemoryGame = () => {
       {matchedPairs === initialCards.length / 2 && (
         <div>
           <h2 className="space">Parabéns</h2>
-          <button onClick={handleDownload}>Baixar Currículo</button>
+          <button onClick={handleDownload} className="btn">
+            Baixar Currículo
+          </button>
         </div>
       )}
     </div>

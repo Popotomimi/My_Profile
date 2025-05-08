@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 // Img
-import Devnotes from "../assets/img/DevNotes.jpg";
+import MemoryGame from "../assets/img/MemoryGame.jpg";
+import SecretWord from "../assets/img/SecretWord.jpg";
 import Reactquiz from "../assets/img/ReactQuiz.jpg";
+import Devnotes from "../assets/img/DevNotes.jpg";
 import Generate from "../assets/img/Generate.jpg";
 import Pokenext from "../assets/img/PokeNext.jpg";
 import Clones from "../assets/img/Clones.jpg";
@@ -50,7 +52,70 @@ const Myprojects = () => {
   return (
     <div className="my-projects">
       <h2>Projetos Online</h2>
-      <p>Veja projetos que já realizei o deploy:</p>
+      <p>Jogos:</p>
+      <div className="projetcs-online">
+        <div className="card">
+          <img src={Reactquiz} alt="Imagem do projeto" />
+          <h3>React Quiz</h3>
+          <p>
+            Um jogo de perguntas e respostas sobre programação. Nele, você pode
+            escolher entre as categorias de HTML, CSS e JavaScript. Ao
+            selecionar uma categoria, o jogo começa exibindo apenas perguntas
+            relacionadas a ela. <br /> Além disso, o jogo oferece
+            funcionalidades que auxiliam o usuário durante a partida, como dicas
+            e a opção de eliminar uma das alternativas para facilitar a
+            resposta.
+          </p>
+          <Link
+            className="btn"
+            to="https://reactquizdev.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Acesse
+          </Link>
+        </div>
+        <div className="card">
+          <img src={MemoryGame} alt="Imagem do projeto" />
+          <h3>Memory Game</h3>
+          <p>
+            Desenvolvi um jogo de memória com ícones de animais, utilizando
+            React, React Icons, Vite e TypeScript. O objetivo é desafiar os
+            jogadores a encontrarem os pares corretos, estimulando a memória e a
+            concentração. Com uma interface intuitiva e responsiva, o jogo
+            oferece uma experiência divertida e educativa para todas as idades!{" "}
+            <br />
+            Utilizei o Animate.css para adicionar animações e tornar o jogo mais
+            envolvente.
+          </p>
+          <Link
+            className="btn"
+            to="https://gamereactmemory.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Acesse
+          </Link>
+        </div>
+        <div className="card">
+          <img src={SecretWord} alt="Imagem do projeto" />
+          <h3>Secret Word</h3>
+          <p>
+            Desenvolvi um jogo da forca interativo em React, onde os jogadores
+            testam seus conhecimentos ao tentar adivinhar palavras. Com uma
+            interface dinâmica e responsiva, o jogo oferece uma experiência
+            envolvente, desafiando os participantes a descobrirem o termo
+            correto antes que fiquem sem tentativas. Ideal para quem gosta de
+            jogos educativos e diversão garantida!
+          </p>
+          <Link
+            className="btn"
+            to="https://reactsecretword.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Acesse
+          </Link>
+        </div>
+      </div>
+      <h2 className="space">Veja projetos que já realizei o deploy:</h2>
       <div className="projetcs-online">
         <div className="card">
           <img src={Finder} alt="Imagem do projeto" />
@@ -104,26 +169,6 @@ const Myprojects = () => {
           <Link
             className="btn"
             to="https://serene-trifle-07e9aa.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer">
-            Acesse
-          </Link>
-        </div>
-        <div className="card">
-          <img src={Reactquiz} alt="Imagem do projeto" />
-          <h3>React Quiz</h3>
-          <p>
-            Um jogo de perguntas e respostas sobre programação. Nele, você pode
-            escolher entre as categorias de HTML, CSS e JavaScript. Ao
-            selecionar uma categoria, o jogo começa exibindo apenas perguntas
-            relacionadas a ela. <br /> Além disso, o jogo oferece
-            funcionalidades que auxiliam o usuário durante a partida, como dicas
-            e a opção de eliminar uma das alternativas para facilitar a
-            resposta.
-          </p>
-          <Link
-            className="btn"
-            to="https://reactquizdev.netlify.app/"
             target="_blank"
             rel="noopener noreferrer">
             Acesse

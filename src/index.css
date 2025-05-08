@@ -68,23 +68,26 @@ body.light-mode {
   color: #fff !important;
 }
 
-.btn {
-  background-color: #f6982d;
-  padding: 10px;
-  color: #222;
-  font-weight: bold;
-  border: solid 1px #000;
-  border-radius: 5px;
-  margin-top: 10px;
+a {
   text-decoration: none;
-  transition: 0.5s;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(135deg, #f6982d 0%, #f8cd40 100%);
+  border-radius: 5px;
   transform: 0.5s;
+  transition: 0.5s;
+  color: #000;
 }
 
 .btn:hover {
-  background-color: #000;
-  border: solid 1px #f6982d;
-  color: #f6982d;
+  background: linear-gradient(135deg, #f8cd40 0%, #f6982d 100%);
 }
 
 /* Nav */
@@ -302,92 +305,64 @@ body.light-mode {
   background-color: #fff;
 }
 
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  background: linear-gradient(135deg, #f6982d 0%, #f8cd40 100%);
-  border-radius: 5px;
-  transform: 0.5s;
-  transition: 0.5s;
-}
-
-button:hover {
-  background: linear-gradient(135deg, #f8cd40 0%, #f6982d 100%);
-}
-
-/* AuthPage */
+/* Auth Page */
 
 .auth-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: 40px;
 }
 
 .auth-container h1 {
   text-align: center;
-  color: #f6982d;
-  margin-top: 50px;
-  margin-bottom: 70px;
+  color: #ff8c00;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 50px;
 }
 
 .backend-section,
 .frontend-section {
-  margin-bottom: 40px;
-  padding: 20px;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  background-color: #c3c3c3;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  margin-bottom: 30px;
 }
 
 .backend-section h2,
 .frontend-section h2 {
   color: #222;
-  margin-bottom: 15px;
-}
-
-.backend-section p,
-.frontend-section p {
-  color: #333;
-  line-height: 1.6;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-left: 5px solid #ff8c00;
+  padding-left: 10px;
 }
 
 ul.dependencies {
   list-style: none;
-  list-style-type: none;
   padding: 0;
-  color: #222;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 ul.dependencies li {
-  padding: 5px 0;
   display: flex;
   align-items: center;
+  font-size: 1rem;
+  padding: 8px 0;
+  color: #444;
 }
 
 .footer-auth {
-  margin-top: 30px;
   text-align: center;
-  font-size: 0.95rem;
-  color: #555;
-  background-color: #c3c3c3;
-  padding: 20px;
+  font-size: 1rem;
+  color: #666;
+  background: #fff;
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .footer-auth a {
-  color: #0044ff;
+  color: #0077cc;
   text-decoration: none;
   font-weight: bold;
   display: inline-flex;
@@ -406,11 +381,20 @@ ul.dependencies li {
   vertical-align: middle;
 }
 
-.repository {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* Responsividade */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 20px;
+  }
+
+  .backend-section,
+  .frontend-section {
+    padding: 20px;
+  }
+
+  .auth-container h1 {
+    font-size: 1.8rem;
+  }
 }
 
 /* Comments */
@@ -520,6 +504,137 @@ p::first-letter {
 
 /* About */
 
+.portifolio {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+  gap: 3rem;
+  color: #fff;
+}
+
+.memory {
+  margin-bottom: 100px;
+}
+
+.social-networks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 15px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  width: 80%;
+  border-radius: 15px;
+  font-size: 15px;
+}
+
+.info-card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #444;
+  width: 100%;
+}
+
+.info-card h4 {
+  color: #ff8c00;
+  margin-bottom: 0.5rem;
+}
+
+.info-card svg {
+  background-image: linear-gradient(
+    90deg,
+    rgb(250, 158, 82) 5%,
+    rgb(218, 221, 36) 100%
+  );
+  padding: 1px;
+  border-radius: 50%;
+  color: #000;
+}
+
+.about-text h2 {
+  color: #ff8c00;
+  font-size: 2.2rem;
+  margin-bottom: 1.3rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-text h2::after {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgb(250, 158, 82) 5%,
+    rgb(218, 221, 36) 100%
+  );
+  height: 3px;
+  width: 30%;
+}
+
+.portifolio h1 {
+  width: 100%;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  background-image: linear-gradient(
+    90deg,
+    rgb(250, 158, 82) 5%,
+    rgb(218, 221, 36) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sidebar {
+  flex: 1 1 0;
+  border-radius: 15px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding: 3rem 0;
+}
+
+.sidebar img {
+  max-width: 70%;
+  border-radius: 15px;
+  position: absolute;
+  top: -3rem;
+}
+
+.sidebar .title {
+  color: #fff;
+  background-color: #222;
+  border-radius: 15px;
+  margin-top: 9rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.about {
+  background-color: #111;
+  flex: 2 1 0;
+  border: 15px;
+  border-radius: 15px;
+  padding: 3rem;
+}
+
 .container-animals {
   margin-top: 50px;
   display: flex;
@@ -626,33 +741,14 @@ p::first-letter {
   transform: translateY(-20px);
 }
 
-.about {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.about-text {
-  color: #c3c3c3;
-  background: rgba(0, 0, 0, 0.884);
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 800px;
-}
-
 .about-text p {
   line-height: 1.2rem;
   margin-bottom: 15px;
-  font-weight: bold;
 }
 
 .message {
   margin: 0 auto;
-  width: 300px;
+  width: 260px;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid;
@@ -752,6 +848,10 @@ footer p {
   .container-animation {
     top: 31%;
     height: 60%;
+  }
+
+  .about {
+    width: 70%;
   }
 
   /* My Projects */
