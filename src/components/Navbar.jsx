@@ -35,28 +35,26 @@ const Navbar = () => {
       <ul className="navbar">
         <li className="menuToggle" onClick={() => setMenuOpen(!menuOpen)}>
           <TiThMenu title="Menu" />
-          {menuOpen && (
-            <ul className="submenu">
-              <li>
-                <Link to="/">
-                  <BsHouse />
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about">
-                  <BsInfoSquare />
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/auth">
-                  <GiPadlock />
-                  Auth
-                </Link>
-              </li>
-            </ul>
-          )}
+          <ul className={`submenu ${menuOpen ? "open" : ""}`}>
+            <li>
+              <Link to="/">
+                <BsHouse />
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about">
+                <BsInfoSquare />
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/auth">
+                <GiPadlock />
+                Auth
+              </Link>
+            </li>
+          </ul>
         </li>
         <li className="styleBack" onClick={handleStyle}>
           {!background ? (
