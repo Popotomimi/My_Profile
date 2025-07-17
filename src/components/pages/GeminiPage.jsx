@@ -36,6 +36,10 @@ const GeminiPage = () => {
     <div className="gemini-page">
       <h1>Pergunte à IA</h1>
       <form onSubmit={handleSubmit}>
+        <img
+          src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWZtY2RjZ2NrNXhydTllem9jbTQyYTFpemJsOWthbjQxNDRraDcxdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AHgKEv1pyoYfCNbqGx/giphy.gif"
+          alt="Gif do robo"
+        />
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
@@ -43,8 +47,8 @@ const GeminiPage = () => {
           placeholder="Digite sua pergunta..."
         />
         <p>
-          Esta inteligência artificial é limitada a respostas em formato de
-          texto.
+          As respostas fornecidas por esta IA são baseadas em informações
+          prévias e podem não refletir eventos recentes ou dados em tempo real.
         </p>
         <button className="btn" disabled={loading}>
           {loading ? "Pensando..." : "Perguntar"}

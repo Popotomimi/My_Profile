@@ -329,11 +329,19 @@ a {
   justify-content: center;
   align-self: center;
   flex-direction: column;
-  padding: 100px 25px;
+  padding: 50px 25px;
   border-radius: 10px;
   border: solid 1px #f6982d;
   box-shadow: 1px 1px 5px 1px #00000096;
   background-color: #222;
+}
+
+.gemini-page form img {
+  width: 50%;
+  height: 150px;
+  margin: 0 auto 50px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px 1px #f6982d;
 }
 
 .gemini-page form textarea {
@@ -343,7 +351,7 @@ a {
   padding: 10px;
   color: #fff;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .gemini-page form textarea::placeholder {
