@@ -7,6 +7,8 @@ import {
 } from "react-icons/bs";
 import { TiThMenu } from "react-icons/ti";
 import { GiPadlock } from "react-icons/gi";
+import { RiCloseLargeFill } from "react-icons/ri";
+import { SiProbot } from "react-icons/si";
 
 // Hooks
 import { useState } from "react";
@@ -34,7 +36,12 @@ const Navbar = () => {
     <nav>
       <ul className="navbar">
         <li className="menuToggle" onClick={() => setMenuOpen(!menuOpen)}>
-          <TiThMenu title="Menu" />
+          {menuOpen ? (
+            <RiCloseLargeFill title="Fechar" />
+          ) : (
+            <TiThMenu title="Menu" />
+          )}
+
           <ul className={`submenu ${menuOpen ? "open" : ""}`}>
             <li>
               <Link to="/">
@@ -46,6 +53,12 @@ const Navbar = () => {
               <Link to="/about">
                 <BsInfoSquare />
                 About
+              </Link>
+            </li>
+            <li>
+              <Link to="/gemini">
+                <SiProbot />
+                Gemini
               </Link>
             </li>
             <li>

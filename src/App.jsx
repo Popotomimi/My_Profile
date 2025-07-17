@@ -12,6 +12,7 @@ import "animate.css";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import AuthPage from "./components/pages/AuthPage";
+import GeminiPage from "./components/pages/GeminiPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/auth" element={<AuthPage />} />
+        <Route path="/gemini" element={<GeminiPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
